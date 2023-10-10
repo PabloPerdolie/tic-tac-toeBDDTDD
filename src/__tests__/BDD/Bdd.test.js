@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
-import Cells from '../../Cells';
+import App from '../../App';
 
 describe('Cell component', () => {
     it('should render cells with states of id = "cell-N" and value=null', () => {

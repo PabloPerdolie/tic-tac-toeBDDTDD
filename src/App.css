@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Стили для доски (класс board) */
+.board {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+/* Стили для статуса игры (класс status) */
+.status {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Стили для ячеек (класс cells) */
+.cells {
+  width:300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* Измените ширину по вашему усмотрению */
+  gap: 2px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Стили для отдельной ячейки (класс cell) */
+.cell {
+  width: 100px; /* Измените ширину и высоту по вашему усмотрению */
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  border: 2px solid #333;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.cell:hover {
+  background-color: #f0f0f0; /* Изменение цвета при наведении */
+}
+
+/* Дополнительные стили для выделения победной линии */
+.winner-line {
+  background-color: #ffff00; /* Цвет победной линии */
 }
