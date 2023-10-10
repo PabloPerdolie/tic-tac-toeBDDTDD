@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import App from '../App';
+import App from '../../App';
 
 test('initial game board state, func generateCells()', () => {
     const { getAllByTestId } = render(<App />);
